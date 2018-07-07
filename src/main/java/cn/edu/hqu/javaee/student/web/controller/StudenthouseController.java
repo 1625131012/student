@@ -14,7 +14,7 @@ import cn.edu.hqu.javaee.student.service.StudenthouseService;
 
 @Controller
 @RequestMapping("/stu_house")
-public class MessageController {
+public class StudenthouseController {
 	@Autowired
 	StudenthouseService studenthouseService;
 	@RequestMapping(value="/{userNameid}",method=RequestMethod.GET)
