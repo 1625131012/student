@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+/*web background*/
+.container {
+	display: table;
+	height: 100%;
+}
+</style>
+<title>修改房屋信息</title>
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-6 col-offset-3">
+			<h1>修改房屋信息</h1>
+			<form class="form-horizontal" role="form" action="/change_house"
+				th:action="@{/change_house}" th:object="${user}" method="post"
+				th:method="post">
+
+				<div class="form-group row">
+					<label for="address" class="col-md-3 col-form-label">地址：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="address"
+							placeholder="请输入房屋地址"  th:field="*{address}">
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label for="type" class="col-md-3 col-form-label">类型：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="type"
+							placeholder="请输入房屋类型"  th:field="*{type}">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="people" class="col-md-3 col-form-label">可住人数：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="people"
+							placeholder="请输入可住人数"  th:field="*{people}">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="money" class="col-md-3 col-form-label">价格：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="money"
+							placeholder="请输入房屋价格"  th:field="*{money}">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="house_id" class="col-md-3 col-form-label">房屋编号：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="house_id"
+							placeholder="请输入房屋编号"  th:field="*{house_id}">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="rent" class="col-md-3 col-form-label">是否可租：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="rent"
+							placeholder="填写是或否"  th:field="*{rent}">
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<input class="btn btn-block" type="submit" value="确认修改" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
+
+

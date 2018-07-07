@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+
+<title>房屋信息</title>
+</head>
+<body>
+<div class="container col-md-12">
+   <table class="table">
+   <thead>
+    <tr><td colspan="2">房屋信息</td></tr>
+   </thead>
+   <tr><td>地址：</td><td th:text="${hquer.address}">地址</td></tr>
+   <tr><td>类型：</td><td th:text="${hquer.type}">类型</td></tr>
+   <tr><td>可住人数:</td><td th:text="${hquer.people}">人数</td></tr>
+   <tr><td>价钱:</td><td th:text="${hquer.money}">价钱</td></tr>
+   <tr><td>id:</td><td th:text="${hquer.userNameid}">id</td></tr>
+   </table>
+</div>
+<div class="form-group row">
+   <input class="btn btn-block" type="submit" value="申请会面" />
+   <input class="btn btn-block" type="submit" value="订房" />
+</div>
+</body>
+</html>

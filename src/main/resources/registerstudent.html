@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link
+	href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	rel="stylesheet">
+<style>
+/*web background*/
+.container {
+	display: table;
+	height: 100%;
+}
+</style>
+<title>学生注册</title>
+</head>
+<body>
+	<div class="container">
+		<div class="col-md-6 col-offset-3">
+			<h1>注册</h1>
+			<form class="form-horizontal" role="form" action="/hquer/registerstudent"
+				th:action="@{/hquer/registerstudent}" th:object="${hquer}" method="post"
+				th:method="post" enctype="multipart/form-data">
+				<div class="form-group row">
+					<label for="firstName" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('firstName')}?'badge badge-danger'">姓：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="firstName"
+							placeholder="请输入姓"  th:field="*{firstName}"
+							th:classappend="${#fields.hasErrors('firstName')}?'text-danger'">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="lastName" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('lastName')}?'badge badge-danger'">名：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="lastName"
+							placeholder="请输入名"  th:field="*{lastName}"
+							th:classappend="${#fields.hasErrors('lastName')}?'text-danger'">
+					</div>
+				</div>
+				
+				<div class="form-group row">
+					<label for="address_stu" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('address_stu')}?'badge badge-danger'">地址：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="address_stu"
+							placeholder="请输入地址"  th:field="*{address_stu}"
+							th:classappend="${#fields.hasErrors('address_stu')}?'text-danger'">
+					</div>
+				</div>
+
+               <div class="form-group row">
+					<label for="phonestu" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('phonestu')}?'badge badge-danger'">电话号码：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="phonestu"
+							placeholder="请输入电话号码"  th:field="*{phonestu}"
+							th:classappend="${#fields.hasErrors('phonestu')}?'text-danger'">
+					</div>
+			   </div>
+
+               <div class="form-group row">
+					<label for="birthday" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('birthday')}?'badge badge-danger'">出生日期：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="birthday"
+							placeholder="请输入出生日期"  th:field="*{birthday}"
+							th:classappend="${#fields.hasErrors('birthday')}?'text-danger'">
+					</div>
+			   </div>
+
+               <div class="form-group row">
+					<label for="sex" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('sex')}?'badge badge-danger'">性别：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="sex"
+							placeholder="请输入性别"  th:field="*{sex}"
+							th:classappend="${#fields.hasErrors('sex')}?'text-danger'">
+					</div>
+			   </div>
+
+				<div class="form-group row">
+					<label for="userNamestu" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('userNamestu')}?'badge badge-danger'">用户名：</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="userNamestu"
+							placeholder="请输入用户名"  th:field="*{userNamestu}"
+							th:classappend="${#fields.hasErrors('userNamestu')}?'text-danger'">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="passwordstu" class="col-md-3 col-form-label"
+						th:classappend="${#fields.hasErrors('passwordstu')}?'badge badge-danger'">密码：</label>
+					<div class="col-md-9">
+						<input type="password" class="form-control" id="passwordstu"
+							placeholder="请输入密码"  th:field="*{passwordstu}"
+							th:classappend="${#fields.hasErrors('passwordstu')}?'text-danger'">
+					</div>
+				</div>
+				<div class="form-group row">
+					<input class="btn btn-block" type="submit" value="注册" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
